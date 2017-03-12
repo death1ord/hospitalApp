@@ -8,13 +8,13 @@ Both the CLI and generated project have dependencies that require Node 6.9.0 or 
 
 #Installation
 1. Make sure you have npm installed. (https://nodejs.org/en/download/)
-2. Install Angular CLI globally 'npm install -g @angular/cli'
-3. git clone this repository 'git clone link to repository'. cd into folder 'cd path_to_base_of_this_folder'
-4. Run 'npm install' to install node modules required by this project.
-5. Install bower 'npm install bower -g'
+2. Install Angular CLI globally `npm install -g @angular/cli`
+3. git clone this repository `git clone link to repository`. cd into folder 'cd path_to_base_of_this_folder'
+4. Run `npm install` to install node modules required by this project.
+5. Install bower `npm install bower -g`
 6. Run bower install  to install bower components needed by this project.
 --PROJECT SETUP SUCCESSFUL---
-7. Within project folder run 'ng serve' or 'npm start' to start local built in server
+7. Within project folder run `ng serve` or `npm start` to start local built in server
 8. Navigate to localhost:4200/. If you see an app framework, it worked. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
@@ -47,13 +47,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 By Default, this project uses scss files.
 
 ## Add new node packages
-'npm install package_name'
+`npm install package_name`
 import name_of_package || import component from name_of_package in your app.component.ts
-You can also include js or scss/css files using angular-cli.json under the scripts property ('for js') or the styles property for css/scss
+You can also include js or scss/css files using angular-cli.json under the scripts property (`for js`) or the styles property for css/scss
 You will have to stop and restart the local server in order for changes to show up.
 
 ## Bower components.
-'bower install name_of_package --save'
-Include js or scss/css files using angular-cli.json under the scripts property ('for js') or the styles property for css/scss
+`bower install name_of_package --save`
+Include js or scss/css files using angular-cli.json under the scripts property (`for js`) or the styles property for css/scss
 You will have to stop and restart the local server in order for changes to show up.
 
