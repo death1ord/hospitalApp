@@ -1,0 +1,16 @@
+<md-sidenav-container class="demo-sidenav-container full-width-height-row">
+
+  <md-sidenav #end align="end" mode="side" opened mdl-shadow="4" class="right-side-nav">
+    End Side Drawer
+    <br>
+    <button md-button (click)="end.close()">Close</button>
+  </md-sidenav>
+
+  <div class="demo-sidenav-content">
+
+    <div>
+      <button md-button (click)="end.toggle()">Toggle End Side Drawer</button>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</md-sidenav-container>

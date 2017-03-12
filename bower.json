@@ -1,0 +1,17 @@
+{
+  "name": "pollshare-market",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Raheel Farooqui <rfarooqui@choicestream.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

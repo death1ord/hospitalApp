@@ -1,3 +1,38 @@
-<h1>
-  {{title}}
-</h1>
+<div class="demo-container" mdl-shadow="2">
+    <mdl-layout mdl-layout-fixed-header mdl-layout-header-seamed mdl-layout-fixed-drawer>
+        <mdl-layout-header>
+            <mdl-layout-header-row>
+                <mdl-layout-spacer></mdl-layout-spacer>
+                <div mdl-cell-middle class="mdl-cell mdl-cell--4-col logo"></div>
+                <mdl-layout-spacer></mdl-layout-spacer>
+            </mdl-layout-header-row>
+            <mdl-layout-header-row>
+                <md-input-container class="full-width-height-row mat-input-container-inverse">
+                    <input mdInput placeholder="Search">
+                </md-input-container>
+            </mdl-layout-header-row>
+        </mdl-layout-header>
+        <mdl-layout-drawer>
+            <md-toolbar color="accent" class="small-toolbar">
+                <span>subhead 1</span>
+            </md-toolbar>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" routerLink="/all" routerLinkActive="active">All</a>
+            </nav>
+            <md-toolbar color="accent" class="small-toolbar">
+                <span>subhead 2</span>
+            </md-toolbar>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" routerLink="/category/1" routerLinkActive="active">Category 1</a>
+                <a class="mdl-navigation__link" routerLink="/category/2" routerLinkActive="active">Category 2</a>
+                <a class="mdl-navigation__link" routerLink="/category/3" routerLinkActive="active">Category 3</a>
+                <a class="mdl-navigation__link" routerLink="/category/4" routerLinkActive="active">Category 4</a>
+                <a class="mdl-navigation__link" routerLink="/category/5" routerLinkActive="active">Category 5</a>
+                <a class="mdl-navigation__link" routerLink="/category/6" routerLinkActive="active">Category 6</a>
+            </nav>
+        </mdl-layout-drawer>
+        <mdl-layout-content class="full-width-height-column">
+            <app-body class="full-width-height-row"></app-body>
+        </mdl-layout-content>
+    </mdl-layout>
+</div>

@@ -1,1 +1,181 @@
 /* You can add global styles to this file, and also import other style files */
+
+////////////////////////////////////////////////////////////////////
+//Angular Material Theme Configuration
+////////////////////////////////////////////////////////////////////
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import "~angular2-mdl/scss/color-definitions";
+@import '~angular2-mdl/scss/material-design-lite';
+@import '~@angular/material/core/theming/all-theme';
+$color-primary: $palette-indigo-500;
+$color-primary-dark: $palette-indigo-700;
+$color-accent: $palette-pink-A200;
+$color-primary-contrast: $color-dark-contrast;
+$color-accent-contrast: $color-dark-contrast;
+// Plus imports for other components in your app.
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$candy-app-warn: mat-palette($mat-red);
+// Create the theme object (a Sass map containing all of the palettes).
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($candy-app-theme);
+///////////////////////////////////////////////////////////////////
+//Mixin space
+//////////////////////////////////////////////////////////////////
+//Create default fonts
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin robotocondensed {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+//Define border radius that works across browsers
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//Clear layouts after using floats
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+}
+
+//Create animation across browsers
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+//Truncate Text and prevent overflow
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin display-flex($direction) {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin flex-fill-space() {
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;
+    /* OLD - Firefox 19- */
+    -webkit-flex: 1;
+    /* Chrome */
+    -ms-flex: 1;
+    /* IE 10 */
+    flex: 1;
+}
+
+///////////////////////////////////////////////////////////////////
+//Define SASS Variables space
+//////////////////////////////////////////////////////////////////
+
+//Colors
+$white: #fff;
+$white-80: rgba(255, 255, 255, 0.8);
+
+
+//Font-variations
+$font-small-header: 16px;
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////
+//Start Styling
+//////////////////////////////////////////////////////////////////
+html {
+    height: 100%;
+}
+
+body {
+    @include robotocondensed();
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.full-width-height-column {
+    @include display-flex(column);
+    @include flex-fill-space();
+}
+
+.full-width-height-row {
+    @include display-flex(row);
+    @include flex-fill-space();
+}
+
+.mat-input-container-inverse {
+    label {
+        color: $white-80;
+    }
+    .mat-input-underline {
+        border-color: $white-80;
+        .mat-focused {
+            background-color: $white;
+        }
+    }
+    .mat-focused {
+        color: $white;
+    }
+}
+
+.mat-toolbar.small-toolbar {
+        min-height: 0;
+        font-size: $font-small-header;
+        .mat-toolbar-row {
+            height: auto;
+            padding: 12px 10px
+        }
+}
