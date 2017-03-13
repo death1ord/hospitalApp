@@ -14,7 +14,7 @@ Both the CLI and generated project have dependencies that require Node 6.9.0 or 
 5. Install bower `npm install bower -g`
 6. Run bower install  to install bower components needed by this project.
 --PROJECT SETUP SUCCESSFUL---
-7. Rename `angular-cli.json` to `.angular-cli.json`
+7. Rename `angular-cli.json` to `.angular-cli.json` (only use if the .angular-cli.json was not cloned)
 8. Within project folder run `ng serve` or `npm start` to start local built in server
 9. Navigate to localhost:4200/. If you see an app framework, it worked. 
 
