@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class PollshareMarketPage {
+export class HospitalApp {
   navigateTo() {
     return browser.get('/');
   }

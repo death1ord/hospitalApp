@@ -1,15 +1,13 @@
 .demo-sidenav-container {
-  border: 1px solid #eee;
-
-  .mat-sidenav-focus-trap > .cdk-focus-trap-content {
-    padding: 10px;
-  }
-
-  .right-side-nav {
-    width: 300px;
-  }
+    border: 1px solid #eee;
+    .mat-sidenav-focus-trap > .cdk-focus-trap-content {
+        padding: 10px;
+    }
+    .right-side-nav {
+        width: 300px;
+    }
 }
 
 .demo-sidenav-content {
-  padding: 15px;
+    padding: 15px;
 }

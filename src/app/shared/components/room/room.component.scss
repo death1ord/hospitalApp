@@ -1,0 +1,67 @@
+@import '../../../../styles.scss';
+:host {
+    margin: $default-margin 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.room-main-container {
+    width: 200px;
+    height: 200px;
+    border: 8px solid $white;
+    box-shadow: 0px 0px 2px 2px #ddd, inset 0px 0px 2px 2px #ccc;
+    margin-right: $default-margin;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    .high-bar,
+    .low-bar {
+        z-index: 2;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        background-color: #ff0000;
+        text-align: center;
+    }
+    .high-bar:after {
+        content: "High";
+        font-size: 10px;
+    }
+    .low-bar:after {
+        content: "Low";
+        font-size: 10px;
+    }
+    .room-filler {
+        background-color: #c8e6c9;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        text-align: center;
+        -webkit-transition:height 1s; /* Safari */
+        transition: height 1s;
+    }
+    .room-filler.alarm {
+        background: linear-gradient(270deg, #ffebee, #ffcdd2, #e57373);
+        background-size: 600% 600%;
+        -webkit-animation: GradientColor 1s ease infinite;
+        -moz-animation: GradientColor 1s ease infinite;
+        animation: GradientColor 3s ease infinite;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+@include keyframes(GradientColor) {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}

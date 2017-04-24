@@ -1,16 +1,15 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Import Modules used by the app
 ///////////////////////////////////////////////////////////////////////////////////////////////
-import { NgModule }              from '@angular/core';
-import { RouterModule, Routes }  from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Import generated components to be used by the app
 ///////////////////////////////////////////////////////////////////////////////////////////////
 import { AppComponent } from './app.component';
-import {BodyComponent} from './body/body.component';
-import {ExploreviewComponent} from './exploreview/exploreview.component';
-import {CategoryviewComponent} from './categoryview/categoryview.component'
+import { BodyComponent } from './body/body.component';
+import { ExploreviewComponent } from './exploreview/exploreview.component';
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Declare routing here
@@ -19,10 +18,9 @@ import {CategoryviewComponent} from './categoryview/categoryview.component'
 //Else special cases will be matched first
 ///////////////////////////////////////////////////////////////////////////////////////////////
 const appRoutes: Routes = [
-  { path: 'all', component: ExploreviewComponent },
-  { path: 'category/:id',     component: CategoryviewComponent },
-  { path: '',   redirectTo: '/all', pathMatch: 'full' },
-  { path: '**', redirectTo: '/all', pathMatch: 'full' }
+    { path: '', component: ExploreviewComponent },
+    { path: '', redirectTo: '/all', pathMatch: 'full' },
+    { path: '**', redirectTo: '/all', pathMatch: 'full' }
 ];
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,12 +31,12 @@ const appRoutes: Routes = [
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(appRoutes)
-  ],
-  exports: [
-    RouterModule
-  ]
+    imports: [
+        RouterModule.forRoot(appRoutes)
+    ],
+    exports: [
+        RouterModule
+    ]
 })
 
 ///////////////////////////////////////////////////////////////////////////////////////////////

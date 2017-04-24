@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
-import { MdSidenav } from '@angular/material';
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Selector: The tag you place in the html. This tag is never replaced on the DOM.
@@ -12,9 +11,6 @@ import { MdSidenav } from '@angular/material';
     styleUrls: ['./body.component.scss']
 })
 export class BodyComponent implements OnInit, OnDestroy {
-
-    //Should include components if you want to use their functionality.
-    @ViewChild('sidenav') sidenav: MdSidenav;
 
     constructor() {}
 

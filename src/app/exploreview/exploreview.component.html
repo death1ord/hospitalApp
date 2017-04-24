@@ -1,3 +1,20 @@
-<h1>
-  exploreview works!
-</h1>
+<div [fxLayout]="flexboxDirections.row" fxLayoutAlign="start center" fxLayoutFill class="summary-heading" fxLayoutWrap>
+    <div fxFlex class="explore-header-container">
+        <h3 class="">Rooms</h3>
+    </div>
+    <div fxFlex="15" [fxLayout]="flexboxDirections.row" fxLayoutAlign="center center">
+        <div fxFlex="nogrow"> Sort By:</div>
+        <div fxFlex>
+            <md-select [(ngModel)]="sortOrder" (ngModelChange)="onChange()">
+                <md-option *ngFor="let option of sortOptions" [value]="option.value">{{ option.name }}</md-option>
+            </md-select>
+        </div>
+    </div>
+    <div fxFlex="100">
+        <p>All available room</p>
+    </div>
+</div>
+<div fxLayoutAlign="start center" [fxLayout]="flexboxDirections.row" fxLayoutWrap>
+    <app-room *ngFor="let room of allRooms" [room]="room">
+    </app-room>
+</div>

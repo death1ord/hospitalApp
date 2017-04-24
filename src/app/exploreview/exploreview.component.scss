@@ -1,0 +1,30 @@
+@import '../../styles.scss';
+:host {
+    @include display-block-full-width-height();
+}
+
+.summary-heading {
+    padding-right: $padding-24;
+    margin-bottom: $margin-24;
+    padding-bottom: 5px;
+    position: relative;
+    h3 {
+        border-bottom: 1px solid #ccc;
+        @include no-padding-no-margin();
+        padding-bottom: 3px;
+        position: relative;
+        &:after {
+            content: "";
+            width: 50%;
+            display: block;
+            height: 3px;
+            background-color: $accent-color-light;
+            position: absolute;
+            bottom: -2px;
+        }
+    }
+    p {
+        font-style: italic;
+        color: $medium-gray;
+    }
+}

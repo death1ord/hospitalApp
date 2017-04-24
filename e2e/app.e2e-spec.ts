@@ -1,10 +1,10 @@
-import { PollshareMarketPage } from './app.po';
+import { HospitalApp } from './app.po';
 
-describe('pollshare-market App', () => {
-  let page: PollshareMarketPage;
+describe('Hospital App', () => {
+  let page: HospitalApp;
 
   beforeEach(() => {
-    page = new PollshareMarketPage();
+    page = new HospitalApp();
   });
 
   it('should display message saying app works', () => {
